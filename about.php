@@ -27,7 +27,8 @@ include_once('nav.php');
 <div class="container bg-white pt-5">
     <div class="row px-3 pb-5">
         <div class="col-md-12">
-            <h2 class="mb-4 font-weight-bold">Article writer with 10 years of experience</h2>
+            <h2 class="mb-4 font-weight-bold" style="text-align: center;">Article writer with 10 years of experience
+            </h2>
             <img class="img-fluid float-left w-50 mr-4 mb-3" src="img/616ـcarousel-2.png" alt="Image">
             <p class="m-0">
                 Takimata lorem et ut et diam amet dolor gubergren, amet dolor eirmod sea sea invidunt, sed no sed diam

@@ -30,41 +30,43 @@ include_once('nav.php');
         while ($rows = $resalt->fetch_assoc()) {
             $postID =  $rows['postID'];
     ?>
-            <div class="row blog-item px-3 pb-5">
-                <div class="col-md-5">
-                    <img class="img-fluid mb-4 mb-md-0" src="img/<?php echo $rows['postImg'] ?>" alt="Image">
-                </div>
-                <div class="col-md-7">
-                    <h3 class="mt-md-4 px-md-3 mb-2 py-2 bg-white font-weight-bold"><?php echo $rows['postTitle'] ?></h3>
-                    <div class="d-flex mb-3">
-                        <small class="mr-2"><i class="fa fa-calendar-alt"></i>
-                            <?php
+    <div class="row blog-item px-3 pb-5">
+        <div class="col-md-5">
+            <img class="img-fluid mb-4 mb-md-0" src="img/<?php echo $rows['postImg'] ?>" alt="Image">
+        </div>
+        <div class="col-md-7">
+            <h3 class="mt-md-4 px-md-3 mb-2 py-2 bg-white font-weight-bold" style="text-align: center;">
+                <?php echo $rows['postTitle'] ?></h3>
+            <div class="d-flex mb-3">
+                <small class="mr-2"><i class="fa fa-calendar-alt"></i>
+                    <?php
                             $str =  $rows['postTime'];
                             $new_str = substr($str, 0, 16);
                             echo $new_str;
                             ?>
-                        </small>
-                        <small class="mr-2"><i class="fa fa-folder"></i>MY CARS</small>
-                        <?php
+                </small>
+                <small class="mr-2"><i class="fa fa-folder"></i>MY CARS</small>
+                <?php
                         $sqlX = "SELECT COUNT(*) AS `x` FROM `comment` WHERE `comment`.`post_id` = $postID";
                         $resX = mysqli_query($conn, $sqlX);
                         if ($resX->num_rows > 0) {
                             while ($rowx = $resX->fetch_assoc()) {
                         ?>
-                                <small class="mr-2 text-muted"><i class="fa fa-comments"></i> <?php echo $rowx['x']; ?> Comments</small>
-                        <?php
+                <small class="mr-2 text-muted"><i class="fa fa-comments"></i> <?php echo $rowx['x']; ?> Comments</small>
+                <?php
                             }
                         }
                         ?>
-                        <!-- <small class="mr-2 text-muted"><i class="fa fa-comments"></i> 15 Comments</small> -->
-                    </div>
-                    <p style=" display: block; width: 400px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">
-                        <?php echo $rows['postCont'] ?>
-                    </p>
-                    <a class="btn btn-link p-0" href="single.php?id=<?php echo $rows['postID'] ?>">Read More <i
-                            class="fa fa-angle-right"></i></a>
-                </div>
+                <!-- <small class="mr-2 text-muted"><i class="fa fa-comments"></i> 15 Comments</small> -->
             </div>
+            <p style="text-align: center; display: block; width: 400px; overflow: hidden; white-space: nowrap;
+                text-overflow: ellipsis;">
+                <?php echo $rows['postCont'] ?>
+            </p>
+            <a class="btn btn-link p-0" href="single.php?id=<?php echo $rows['postID'] ?>">Read More <i
+                    class="fa fa-angle-right"></i></a>
+        </div>
+    </div>
     <?php }
     } ?>
     <!-- <div class="row blog-item px-3 pb-5">
