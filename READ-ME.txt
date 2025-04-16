@@ -1,0 +1,49 @@
+  =>  Template Name    : Bloggy - Personal Blog Template
+
+  =>  Template Link    : https://htmlcodex.com/personal-blog-template
+
+  =>  Template License : https://htmlcodex.com/license (or read the LICENSE.txt file)
+
+  =>  Template Author  : HTML Codex
+
+  =>  Author Website   : https://htmlcodex.com
+
+  =>  About HTML Codex : HTML Codex is one of the top creators and publishers of Free HTML templates, HTML landing pages, HTML email templates and HTML snippets in the world. Read more at ( https://htmlcodex.com/about-us )
+
+  <div class="carousel-item">
+            <img class="w-100" src="img/<?php echo $rows['postImg'] ?>" alt="Image">
+            <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+              <h2 class="text-white font-weight-bold"><?php echo $rows['postTitle'] ?></h2>
+              <div class="d-flex">
+              <small class="mr-2"><i class="fa fa-calendar-alt"></i>
+                      <?php
+                      $str =  $rows['postTime'];
+                      $new_str = substr($str, 0, 16);
+                      echo $new_str;
+                      ?>
+                    </small>
+                <small class="mr-2"><i class="fa fa-folder"></i> ذوالنون أحمد </small>
+                <small class="mr-2"><i class="fa fa-comments"></i> 15 Comments</small>
+              </div>
+              <a href="" class="btn btn-lg btn-outline-light mt-4">Read More</a>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <img class="w-100" src="img/<?php echo $rows['postImg'] ?>" alt="Image">
+            <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+              <h2 class="text-white font-weight-bold"><?php echo $rows['postTitle'] ?></h2>
+              <div class="d-flex">
+              <small class="mr-2"><i class="fa fa-calendar-alt"></i>
+                      <?php
+                      $str =  $rows['postTime'];
+                      $new_str = substr($str, 0, 16);
+                      echo $new_str;
+                      ?>
+                    </small>
+                <small class="mr-2"><i class="fa fa-folder"></i> ذوالنون أحمد </small>
+                <small class="mr-2"><i class="fa fa-comments"></i> 15 Comments</small>
+              </div>
+              <a href="" class="btn btn-lg btn-outline-light mt-4">Read More</a>
+            </div>
+          </div>
