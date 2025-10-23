@@ -1,13 +1,20 @@
 <?php
-// $servername = "localhost";
-// $username = "root";
-// $password = "";
-// $dbname = "post_db";
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "post_db";
+// CZueSw6XHcal
+// mycarsw1_qwe
 
-$servername = "sql12.freesqldatabase.com:3306";
-$username = "sql12773468";
-$password = "7mPPhBuEb2";
-$dbname = "sql12773468";
+// $servername = "sql12.freesqldatabase.com:3306";
+// $username = "sql12773468";
+// $password = "7mPPhBuEb2";
+// $dbname = "sql12773468";
+
+// $servername = "198.45.114.194";
+// $username = "mycarsw1_qwe";
+// $password = "CZueSw6XHcal";
+// $dbname = "mycarsw1_qwe";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
